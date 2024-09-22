@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo Frequenza Cardiaca di Allenamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4b0082; /* Viola scuro */
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #1e1e1e; /* Nero/grigio scuro */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #800080; /* Viola */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #9400d3; /* Viola chiaro */
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.4em;
+            color: #f4f4f4;
+        }
+        .message {
+            font-size: 1.2em;
+            color: #f4f4f4;
+            margin-top: 15px;
+        }
+        .pig-face {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pig-face">🐷</div>
+        <h1>Calcola la Frequenza Cardiaca di Allenamento</h1>
+        
+        <label for="age">Età (anni):</label>
+        <input type="number" id="age" placeholder="Inserisci la tua età" required>
+
+        <label for="restingHR">Frequenza Cardiaca a Riposo (bpm):</label>
+        <input type="number" id="restingHR" placeholder="Inserisci la tua FC a riposo" required>
+
+        <button onclick="calculateFC()">Calcola</button>
+
+        <div class="result" id="result"></div>
+
+        <!-- Modalità scura/chiara -->
+        <button onclick="toggleTheme()">Attiva Modalità Scura/Chiara</button>
+
+        <!-- Messaggio finale -->
+        <div class="message" id="message"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
